@@ -1,0 +1,2046 @@
+<html>
+
+    <head>
+
+        <% include ../includes/styles %>
+        <% include ../includes/scripts %>
+            <script type="text/javascript" src="/javascripts/memberDetailsJS.js"></script>
+
+
+
+    </head>
+
+    <body>
+        <div class="wrapper ">
+            <div class="sidebar" data-color="orange_light">
+                <!--
+                                  Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+                              -->
+                <div class="logo">
+                    <h4><a href="" class="simple-text logo-normal">
+                            Nurture Software
+                        </a></h4>
+                </div>
+                <div class="sidebar-wrapper" id="sidebar-wrapper">
+                    <ul class="nav">
+                        <li>
+                            <a href="/login/dashboard">
+                                <i class="material-icons" style="font-size: 25px;">dashboard</i>
+                                <strong class="fnt">Dashboard</strong>
+                            </a>
+                        </li>
+
+                        <li id="sub_menu" class="active">
+
+                            <a href="#">
+                                <i class="material-icons" style="font-size: 25px;">group</i>
+                                <strong class="fnt">Members</strong>
+                            </a>
+                            <ul class="hid sub_col">
+
+                                <div class="sub_mar"><a href="/memberDetailsModule/memberDetails/memberdetails"
+                                        class="ml-1" style="color: #ffffff;">Members</a>
+                                </div>
+
+                                <div class="sub_mar"><a href="/memberDetailsModule/memberDetails/mem_div_search"
+                                        class="ml-1" style="color: #ffffff;">Members
+                                        Dividend</a></div>
+
+                                <div class="sub_mar"> <a href="/memberDetailsModule/memberDetails/mem_share_search"
+                                        class="ml-1" style="color: #ffffff;">Members
+                                        Share Details</a></div>
+
+                                <div class="sub_mar"> <a href="/memberDetailsModule/memberDetails/mem_farm_search"
+                                        class="ml-1" style="color: #ffffff;">Farm
+                                        Machinery Details</a></div>
+
+                                <div class="sub_mar"><a href="/memberDetailsModule/memberDetails/mem_hse_det_ser"
+                                        class="ml-1" style="color: #ffffff;">House
+                                        Details</a></div>
+
+                                <div class="sub_mar"> <a href="/memberDetailsModule/memberDetails/kcc_search"
+                                        class="ml-1" style="color: #ffffff;">KCC
+                                        Details</a></div>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="/login/deposits">
+                                <i class="material-icons" style="font-size: 25px;">thumbs_up_down</i>
+                                <strong class="fnt">Deposits</strong>
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="/login/loans">
+                                <i class="material-icons" style="font-size: 25px;">file_upload</i>
+                                <strong class="fnt">Loans</strong>
+                            </a>
+                        </li>
+
+
+                        <li id="sub_menu">
+                            <a href="#">
+                                <i class="material-icons" style="font-size: 25px;">account_balance</i>
+                                <strong class="fnt">Bank</strong>
+                            </a>
+                            <ul class="hid mt-1 sub_col">
+
+                                <div class="sub_mar"><a class="ml" href="/bankModule/bankDetails/asso_bank_search"
+                                        style="color: #ffffff">Associated
+                                        Bank</a></div>
+
+                                <div class="sub_mar"><a class="ml" href="/bankModule/bankDetails/asso_branch_search"
+                                        style="color: #ffffff">Associated Branch</a></div>
+
+                                <div class="sub_mar">
+                                    <a class="ml" href="/bankModule/bankDetails/asso_bank_account_master_search"
+                                        style="color: #ffffff">Associated Bank Account Master</a>
+                                </div>
+
+                                <div class="sub_mar">
+                                    <a class="ml" href="/bankModule/bankDetails/asso_bank_cheque_book_search"
+                                        style="color: #ffffff">Associated Bank Cheque Book</a>
+                                </div>
+
+                                <div class="sub_mar">
+                                    <a class="ml" href="/bankModule/bankDetails/asso_bank_account_search"
+                                        style="color: #ffffff">Associated Bank Account Type</a>
+                                </div>
+
+                                <div class="sub_mar">
+                                    <a class="ml" href="/bankModule/bankDetails/asso_bank_deposit_returns_search"
+                                        style="color: #ffffff">Associated Bank Deposit Returns</a>
+                                </div>
+        
+                                
+                                <div class="sub_mar">
+                                    <a class="ml" href="/bankModule/bankDetails/asso_bank_deposit_master_search"
+                                        style="color: #ffffff">Associated Bank Deposit Master</a>
+                                </div>
+
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="/login/market">
+                                <i class="material-icons" style="font-size: 25px;">local_grocery_store</i>
+                                <strong class="fnt">Market</strong>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/login/reports">
+                                <i class="material-icons" style="font-size: 25px;">date_range</i>
+                                <strong class="fnt">Reports</strong>
+                            </a>
+                        </li>
+
+
+
+                        <li>
+
+                            <a href="/login/payroll">
+                                <i class="material-icons" style="font-size: 25px;">payment</i>
+                                <strong class="fnt">Payroll</strong>
+                            </a>
+
+
+
+                        </li>
+                        <li>
+                            <a href="/login/hr">
+                                <i class="material-icons" style="font-size: 25px;">account_box</i>
+                                <strong class="fnt">HR</strong>
+                            </a>
+                        </li>
+
+
+                        <li>
+
+                            <a href="/login/user">
+                                <i class="material-icons" style="font-size: 25px;">person</i>
+                                <strong class="fnt">User</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="main-panel" id="main-panel">
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg colo">
+                    <div class="container-fluid">
+                        <div class="navbar-wrapper">
+                            <div class="navbar-toggle">
+                                <button type="button" class="navbar-toggler">
+                                    <span class="navbar-toggler-bar bar1"></span>
+                                    <span class="navbar-toggler-bar bar2"></span>
+                                    <span class="navbar-toggler-bar bar3"></span>
+                                </button>
+                            </div>
+                            <a class="navbar-brand" href="#pablo"><strong>Members</strong> </a>
+                        </div>
+                        <button class="navbar-toggler dot" type="button" data-toggle="collapse"
+                            data-target="#navigation" aria-controls="navigation-index" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-bar navbar-kebab"></span>
+                            <span class="navbar-toggler-bar navbar-kebab"></span>
+                            <span class="navbar-toggler-bar navbar-kebab"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <strong class="fnt">User 1</strong>
+                                        <i class="now-ui-icons users_single-02 ml-2"></i>
+                                        <p>
+                                            <span class="d-lg-none d-md-block">Some Actions</span>
+                                        </p>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right"
+                                        aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="#">Upload Photo<i
+                                                class=" material-icons ml-2">add_a_photo</i></a>
+                                        <a class="dropdown-item" href="#">Logout<i
+                                                class=" ml-5 material-icons">power_settings_new</i></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- End Navbar -->
+
+                <div class="content">
+                    <div class="row-sm ">
+                        <div class="col-sm-12">
+                            <div class="card tp">
+                                <div class="card-header"></div>
+                                <div class="card-body">
+
+
+                                    <div class="content">
+
+                                        <h6>Add Record</h6>
+                                        <hr>
+                                        <form autocomplete="off" action="../../memberDetailsModule/memberDetails/mem_details" method="post"
+                                            id="memberform" >
+
+
+                                            <!-- flash message -->
+
+
+                                            <% if(locals.message){ %>
+                                            <div class="text text-center" role="alert" background-color: red;>
+                                                <strong style="color:green"><%= message.success_msg %></strong>
+                                            </div>
+                                            <% } %>
+
+                                            <div id="tabs">
+                                                <!-- Nav pills -->
+                                                <ul class="nav nav-pills ul_col" id="tabs" data-tabs="tabs"
+                                                    role="tablist">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link txt_col show active" data-toggle="tab"
+                                                            href="#member_details">Member
+                                                            Details</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link txt_col show" data-toggle="tab"
+                                                            href="#personal_details">Personal
+                                                            Details</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link txt_col show" data-toggle="tab"
+                                                            href="#present_address">Present
+                                                            Address</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link txt_col show" data-toggle="tab"
+                                                            href="#permanent_address">Permanent
+                                                            Address</a>
+                                                    </li>
+                                                    <li class="nav-item nav_nom">
+                                                        <a class="nav-link txt_col show" data-toggle="tab"
+                                                            href="#loans">Loans
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item active">
+                                                        <a class="nav-link txt_col show " data-toggle="tab"
+                                                            href="#nominee">Nominee
+                                                        </a>
+                                                    </li>
+                                                </ul>
+
+                                                <!-- Tab panes -->
+                                                <div class="tab-content">
+
+                                                    <!-- Member Details Tab -->
+                                                    <div id="member_details" class="container tab-pane show active"><br>
+                                                        <h5>Member Details</h5>
+                                                        <hr>
+                                                        <div class="container row mb-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_typ"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Member
+                                                                    Type Code<span class="astrix">*</span></label>
+                                                                <select required class="col-sm-12 col-md-6" id="mem_typ"
+                                                                    name="mem_typ">
+                                                                    <option disabled="" selected="" value="">Select
+                                                                    </option>
+                                                                    <option value="ordinary">Ordinary</option>
+                                                                    <option value="lifemember">Life Member</option>
+                                                                    <option value="patron">Patron</option>
+                                                                    <option value="preferential">Preferential</option>
+                                                                </select>
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_id"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Member
+                                                                    ID<span class="astrix">*</span></label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="mem_id" id="mem_id" maxlength="20"
+                                                                    onkeypress="return alphanumeric(event)"
+                                                                    placeholder="" style="text-transform: capitalize">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-2">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="emp_code" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Employee
+                                                                    Code<span class="astrix">*</span></label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="emp_code" id="emp_code" maxlength="10"
+                                                                    onkeypress="return numeric(event)" placeholder="">
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6 ">
+                                                                <label for="doj" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Date
+                                                                    of Joining</label>
+                                                                <input type="text" class="col-sm-12 col-md-6" name="doj"
+                                                                    id="doj" placeholder="" required>
+                                                                <span><i class="material-icons iicon1 iicon11"
+                                                                        name="ic_doj" id="ic_doj" data-toggle="doj"
+                                                                        data-target-name="ic_doj">
+                                                                        event_note
+                                                                    </i></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="dob" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Date
+                                                                    of Birth<span class="astrix">*</span></label>
+                                                                <input type="text" class="col-sm-12 col-md-6" name="dob"
+                                                                    id="dob" placeholder="" autocomplete="off" required>
+                                                                <span><i class="material-icons iicon1 iicon11"
+                                                                        data-toggle="dob" data-target-name="dob">
+                                                                        event_note
+                                                                    </i></span>
+                                                            </div>
+                                                            <div id="datepicker" class="col-sm-12 col-md-6">
+                                                                <label for="dor" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Date
+                                                                    of Retirement</label>
+                                                                <input type="text" class="col-sm-12 col-md-6" name="dor"
+                                                                    id="dor" placeholder="">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="adm_no" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Admission
+                                                                    Number <span class="astrix">*</span></label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="adm_no" id="adm_no" maxlength="20"
+                                                                    onkeypress="return alphanumeric(event)"
+                                                                    placeholder="">
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="dept" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Department<span
+                                                                        class="astrix">*</span></label>
+                                                                <select class="col-sm-12 col-md-6" name="dept"
+                                                                    id="dept">
+                                                                    <option disabled="" selected="" value="">Select
+                                                                    </option>
+                                                                    <option value="HR">HR</option>
+                                                                    <option value="Accounts">Accounts</option>
+                                                                    <option value="Loan">Loan</option>
+                                                                    <option value="Sales">Sales</option>
+                                                                    <option value="Cash">Cash</option>
+                                                                </select>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-2">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="ent_fee" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Entrance
+                                                                    Fee</label>
+                                                                <input type="text" class="col-sm-12 col-md-3 inp"
+                                                                    name="ent_fee" id="ent_fee" maxlength="4"
+                                                                    onkeypress="return numeric(event)" placeholder="">
+                                                                <select class="col-sm-12 col-md-3 sel" name="crncytyp"
+                                                                    id="crncytyp" style="height: 1.9em ">
+                                                                    <option disabled="" selected="" value="">Select
+                                                                    </option>
+                                                                    <option value="INR">INR</option>
+                                                                    <option value="USD">USD</option>
+                                                                    <option value="EURO">EURO</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="opn_shr_bal"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Opening
+                                                                    Share Balance</label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="shr_bal" maxlength="3" id="shr_bal"
+                                                                    onkeypress="return numeric(event)" placeholder="">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                
+                                                                    <label for="member_typ" class="mr-sm-4 col-sm-12 col-md-5" style="padding-left:0% !important;">Counter Pay</label>
+
+                                                                    <div class="custom-control custom-radio custom-control-inline rad1 rad2">
+                                                                        <input type="radio" class="custom-control-input1" id="cntr_pay" name="cntr_pay">
+                                                                        <label class="custom-control-label1" for="cntr_pay">Yes</label>
+                                                                    </div>
+
+
+                                                                    <div class="custom-control custom-radio custom-control-inline rad3">
+                                                                        <input type="radio" class="custom-control-input1" id="cntr_pay1" name="cntr_pay">
+                                                                        <label class="custom-control-label1" for="cntr_pay1">No</label>
+                                                                    </div>
+
+                                                            </div>
+
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="thrif_dept"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Thrift
+                                                                    Deposit</label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="thrift_dept" maxlength="7" id="thrift_dept"
+                                                                    onkeypress="return numeric(event)" placeholder="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="dras" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">DRAS</label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="dras" id="dras"
+                                                                    onkeypress="return alphanumeric(event)"
+                                                                    placeholder="">
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="bnk_acc_no"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Bank
+                                                                    Account Number</label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="bnk_acc_no" id="bnk_acc_no" maxlength="18"
+                                                                    onkeypress="return numeric(event)" placeholder="">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="opn_bal" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Opening
+                                                                    Balance</label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="opn_bal" id="opn_bal" maxlength="5"
+                                                                    onkeypress="return numeric(event)" placeholder="">
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="cls_bal" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Closing
+                                                                    Balance</label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="cls_bal" id="cls_bal" maxlength="5"
+                                                                    onkeypress="return numeric(event)" placeholder="">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="remarks" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Remarks</label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="remarks" id="remarks" maxlength="50"
+                                                                    placeholder="">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-4">
+                                                            <!--<div class="col-sm-12 col-md-2">
+                                                                <input type="button" class="btn" name="bck_search"
+                                                                    id="bck_search" value="Back to Search">
+                                                            </div>-->
+                                                            <div class="col-sm-12 col-md-3">
+                                                                <input type="button" class="btn" name="clear_mmbr"
+                                                                    id="clear_mmbr" value="Clear Form"
+                                                                    onclick="clearMemberTab()">
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-7"></div>
+                                                            <div class="col-sm-12 col-md-2">
+                                                                <input type="button" class="btn" name="cont_pers_det"
+                                                                    id="cont_pers_det" onclick="memberDetails();"
+                                                                    value="Continue">
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+
+                                                    <!-- Personal Details Tab -->
+
+                                                    <div id="personal_details" class="container tab-pane show"><br>
+                                                        <h5>Personal Details</h5>
+                                                        <hr>
+                                                        <div class="container row mb-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_typ"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Title</label>
+
+                                                                <select class="col-sm-12 col-md-6" id="title"
+                                                                    name="title" onchange="title_gender(this)">
+                                                                    <option disabled="" selected="" value="">Select
+                                                                    </option>
+                                                                    <option value="Mr">Mr</option>
+                                                                    <option value="Ms">Ms</option>
+                                                                    <option value="Mrs">Mrs</option>
+                                                                    <option value="Shri">Shri</option>
+                                                                    <option value="Smt">Smt</option>
+                                                                </select>
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_id"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">First
+                                                                    Name<span class="astrix">*</span></label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="fname" id="fname" maxlength="20"
+                                                                    placeholder="" style="text-transform: capitalize"
+                                                                    onkeypress="return alpha(event)">
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="container row mb-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_typ"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Middle
+                                                                    Name</label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="mname" id="mname" placeholder=""
+                                                                    style="text-transform: capitalize"
+                                                                    onkeypress="return alpha(event)">
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_id"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Last
+                                                                    Name<span class="astrix">*</span></label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="lname" id="lname" maxlength="20"
+                                                                    placeholder="" style="text-transform: capitalize"
+                                                                    onkeypress="return alpha(event)">
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="container row mb-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_typ"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Father
+                                                                    Name<span class="astrix">*</span></label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="father_name" id="father_name" placeholder=""
+                                                                    style="text-transform: capitalize"
+                                                                    onkeypress="return alpha(event)">
+                                                            </div>
+
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_id"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Marital
+                                                                    Status<span class="astrix">*</span></label>
+                                                                <select class="col-sm-12 col-md-6" id="mar_status"
+                                                                    name="mar_status" onchange="married_status(this)">
+                                                                    <option disabled selected value="">Select</option>
+                                                                    <option value="Divorced">Divorced</option>
+                                                                    <option value="Married">Married</option>
+                                                                    <option value="Single">Single</option>
+                                                                    <option value="Widowed">Widowed</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mb-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_typ"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Gender</label>
+
+                                                                <div
+                                                                    class="custom-control custom-radio custom-control-inline rad1 rad2">
+                                                                    <input type="radio" class="custom-control-input1"
+                                                                        id="radio-1" name="selectedop" value="male">
+                                                                    <label class="custom-control-label1"
+                                                                        for="radio-1">Male </label>
+                                                                </div>
+
+
+                                                                <div
+                                                                    class="custom-control custom-radio custom-control-inline rad3">
+                                                                    <input type="radio" class="custom-control-input1"
+                                                                        id="radio-2" name="selectedop" value="female">
+                                                                    <label class="custom-control-label1"
+                                                                        for="radio-2">Female</label>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_typ"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Spouse
+                                                                    Gender</label>
+
+                                                                <div
+                                                                    class="custom-control custom-radio custom-control-inline rad1 rad2">
+                                                                    <label class="custom-control-label1"
+                                                                        for="genmale">Male</label>  
+                                                                    <input type="radio" class="custom-control-input1"
+                                                                        id="genmale" name="sgender">
+                                                                    
+                                                                </div>
+
+
+                                                                <div
+                                                                    class="custom-control custom-radio custom-control-inline rad3">
+                                                                    <label class="custom-control-label1"
+                                                                        for="genfemale">Female</label>
+                                                                    <input type="radio" class="custom-control-input1"
+                                                                        id="genfemale" name="sgender">
+                                                                    
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="container row mb-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_typ"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Place
+                                                                    Of Birth<span class="astrix">*</span></label>
+                                                                <input type="text" class="col-sm-12 col-md-6" name="pob"
+                                                                    id="pob" placeholder=""
+                                                                    style="text-transform: capitalize"
+                                                                    onkeypress="return alpha(event)">
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="spo_nme" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Spouse
+                                                                    Name</label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="spouse" id="spouse" placeholder=""
+                                                                    style="text-transform: capitalize"
+                                                                    onkeypress="return alpha(event)">
+
+                                                            </div>
+
+
+                                                        </div>
+
+                                                        <div class="container row mb-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_id"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Religion</label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="religion" id="religion" placeholder=""
+                                                                    style="text-transform: capitalize"
+                                                                    onkeypress="return alpha(event)">
+                                                            </div>
+
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_typ"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Caste</label>
+                                                                <select class="col-sm-12 col-md-6" id="caste"
+                                                                    name="caste">
+                                                                    <option disabled selected value="">Select</option>
+                                                                    <option value="Backward">Backward</option>
+                                                                    <option value="Other Backward Community">Other
+                                                                        Backward Community</option>
+                                                                    <option value="Schedule Tribe">Schedule Tribe
+                                                                    </option>
+                                                                    <option value="Schedule Caste">Schedule Caste
+                                                                    </option>
+                                                                    <option value="Others">Others</option>
+                                                                </select>
+
+
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="container row mb-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_typ"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Occupation<span
+                                                                        class="astrix">*</span></label>
+                                                                <select class="col-sm-12 col-md-6" id="occupation"
+                                                                    name="occupation">
+                                                                    <option disabled selected value="">Select</option>
+                                                                    <option value="Employed">Employed</option>
+                                                                    <option value="Unemployed">Unemployed</option>
+                                                                    <option value="Farmer">Farmer</option>
+                                                                    <option value="Allied-agriculturist">
+                                                                        Allied-agriculturist</option>
+                                                                </select>
+
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_id"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Customer
+                                                                    Catagory<span class="astrix">*</span></label>
+                                                                <select class="col-sm-12 col-md-6" id="cust_category"
+                                                                    name="cust_category">
+                                                                    <option disabled="" selected="" value="">Select
+                                                                    </option>
+                                                                    <option value="PROPRIETORY CONCERNS ">PROPRIETORY
+                                                                        CONCERNS </option>
+                                                                    <option value="HUF/JOINT FAMILIES ">HUF/JOINT
+                                                                        FAMILIES </option>
+                                                                    <option value="   PARTNERSHIP FIRMS "> PARTNERSHIP
+                                                                        FIRMS </option>
+                                                                    <option value="JLGS (JOINT LIABILITY GROUPS) ">JLGS
+                                                                        (JOINT LIABILITY GROUPS) </option>
+                                                                    <option value=" SHGS-DIRECT-WOMEN ">
+                                                                        SHGS-DIRECT-WOMEN </option>
+                                                                    <option value="SHGS-DIRECT-OTHERS ">
+                                                                        SHGS-DIRECT-OTHERS </option>
+                                                                    <option value=" SHGS-THROUGH NGOS-WOMEN ">
+                                                                        SHGS-THROUGH NGOS-WOMEN </option>
+                                                                    <option value="  SHGS-THROUGH NGOS-OTHERS ">
+                                                                        SHGS-THROUGH NGOS-OTHERS </option>
+                                                                    <option value=" SHGS-THROUGH MFIS-WOMEN ">
+                                                                        SHGS-THROUGH MFIS-WOMEN </option>
+                                                                    <option value=" SHGS-THROUGH MFIS-OTHERS ">
+                                                                        SHGS-THROUGH MFIS-OTHERS </option>
+                                                                    <option
+                                                                        value=" OTHER MFIS NOT ENGAGED IN PROMOTION OF SHGS ">
+                                                                        OTHER MFIS NOT ENGAGED IN PROMOTION OF SHGS
+                                                                    </option>
+                                                                    <option
+                                                                        value="CLUBS/ASSNS/INSTNS-CHARITABLE/RELIGIOUS/HEALTH/EDU">
+                                                                        CLUBS/ASSNS/INSTNS-CHARITABLE/RELIGIOUS/HEALTH/EDU
+                                                                    </option>
+                                                                    <option
+                                                                        value="NRIS-INDLS/GOVT/EMBASSY/TRADE MISSION/COS/INSTNS/F ">
+                                                                        NRIS-INDLS/GOVT/EMBASSY/TRADE
+                                                                        MISSION/COS/INSTNS/F </option>
+                                                                    <option
+                                                                        value="TRUST/NGOS & GROUPS(EXCEPT JLGS/MFIS)">
+                                                                        TRUST/NGOS & GROUPS(EXCEPT JLGS/MFIS)</option>
+                                                                    <option value="NON-RESIDENTS">NON-RESIDENTS</option>
+                                                                    <option value="FARMERS">FARMERS</option>
+                                                                    <option value="TRADERS - WHOLESALE AND RETAIL">
+                                                                        TRADERS - WHOLESALE AND RETAIL</option>
+                                                                    <option value="SMALL BUSINESSMEN ">SMALL BUSINESSMEN
+                                                                    </option>
+                                                                    <option value="WAGE & SALARY EARNERS">WAGE & SALARY
+                                                                        EARNERS</option>
+                                                                    <option value="PROFESSIONAL & SELF EMPLOYED ">
+                                                                        PROFESSIONAL & SELF EMPLOYED </option>
+                                                                    <option value="RETIRED PERSONS">RETIRED PERSONS
+                                                                    </option>
+                                                                    <option value=" LANDLORDS/ HOUSE OWNERS ">
+                                                                        LANDLORDS/ HOUSE OWNERS </option>
+                                                                    <option value="  HOUSEWIVES "> HOUSEWIVES </option>
+                                                                    <option value=" STUDENTS"> STUDENTS</option>
+                                                                    <option value=" OTHERS - INDIVIDUALS "> OTHERS -
+                                                                        INDIVIDUALS </option>
+                                                                    <option
+                                                                        value=" SOCIETY-PRIMARY AGRI.COOP SOCIETIES (PACS) ">
+                                                                        SOCIETY-PRIMARY AGRI.COOP SOCIETIES (PACS)
+                                                                    </option>
+                                                                    <option
+                                                                        value="SOCIETY-FARMERS SERVICE(FSS)/LARGE SIZED ADIVASI M">
+                                                                        SOCIETY-FARMERS SERVICE(FSS)/LARGE SIZED ADIVASI
+                                                                        M</option>
+                                                                    <option value="MALE INDIVIDUAL ">MALE INDIVIDUAL
+                                                                    </option>
+                                                                    <option value="FEMALE INDIVIDUAL">FEMALE INDIVIDUAL
+                                                                    </option>
+                                                                    <option
+                                                                        value="OTHER FIN.CO-OP INST.(PCARDBS/SCARDBS DCCBS UCB ">
+                                                                        OTHER FIN.CO-OP INST.(PCARDBS/SCARDBS DCCBS UCB
+                                                                    </option>
+                                                                    <option
+                                                                        value="SOCIETY-HOUSING/SALARY EARNERS/AGRL CO-OP/MKTG&TRA ">
+                                                                        SOCIETY-HOUSING/SALARY EARNERS/AGRL
+                                                                        CO-OP/MKTG&TRA </option>
+                                                                    <option
+                                                                        value="NBFC/PVT.BANKS/FORGN BKS HAVING BRS IN INDIA/PVT M ">
+                                                                        NBFC/PVT.BANKS/FORGN BKS HAVING BRS IN INDIA/PVT
+                                                                        M </option>
+                                                                    <option
+                                                                        value="PVT COMPANIES INCLG PUBLIC & PVT LTD.COS/NON PROFI  ">
+                                                                        PVT COMPANIES INCLG PUBLIC & PVT LTD.COS/NON
+                                                                        PROFI </option>
+                                                                    <option value="RAILWAYS/P&T/COMMUN ETC.">
+                                                                        RAILWAYS/P&T/COMMUN ETC.</option>
+                                                                    <option value="GENERAL STATE GOVT ">GENERAL STATE
+                                                                        GOVT </option>
+                                                                    <option
+                                                                        value="IRRIGATION/ROAD&WATERTRANSPORT/FOOD&CIVIL SUPPLIES ">
+                                                                        IRRIGATION/ROAD&WATERTRANSPORT/FOOD&CIVIL
+                                                                        SUPPLIES </option>
+                                                                    <option
+                                                                        value="LOCAL AUTHOS/MUNICIPS/ZILA PARISHADS/PANCHAYAT/UNI ">
+                                                                        LOCAL AUTHOS/MUNICIPS/ZILA
+                                                                        PARISHADS/PANCHAYAT/UNI </option>
+                                                                    <option
+                                                                        value=" RRBS/UTI/NHB/LIC/GIC/EXIMBANK/PUB SEC BKS/FINC COS ">
+                                                                        RRBS/UTI/NHB/LIC/GIC/EXIMBANK/PUB SEC BKS/FINC
+                                                                        COS </option>
+                                                                    <option value="GENERAL STATE GOVT ">GENERAL STATE
+                                                                        GOVT </option>
+                                                                    <option
+                                                                        value="PSUS/COS/TRADING CORPNS/ROAD TRANSPORT/EBS/HOUSING ">
+                                                                        PSUS/COS/TRADING CORPNS/ROAD
+                                                                        TRANSPORT/EBS/HOUSING </option>
+                                                                </select>
+
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="container row mb-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_typ"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Customer
+                                                                    Type</label>
+                                                                <select class="col-sm-12 col-md-6" id="cust_type"
+                                                                    name="cust_type">
+                                                                    <option disabled="" selected="" value="">Select
+                                                                    </option>
+                                                                    <option value="Individual">Individual</option>
+                                                                    <option value="SHG member">SHG member</option>
+                                                                    <option value="Member of other group">Member of
+                                                                        other group</option>
+                                                                </select>
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_id"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Business
+                                                                    Segment</label>
+                                                                <select class="col-sm-12 col-md-6" id="buss_segment"
+                                                                    name="buss_segment">
+                                                                    <option disabled="" selected="" value="">Select
+                                                                    </option>
+                                                                    <option value="Agriculture">Agriculture</option>
+                                                                    <option value="Aquaculture">Aquaculture</option>
+                                                                    <option value="Pisiculture">Pisiculture</option>
+                                                                    <option value="Industry">Industry</option>
+                                                                    <option value="Education">Education</option>
+                                                                    <option value="Business">Business</option>
+                                                                    <option value="Artisans">Artisans</option>
+                                                                </select>
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="container row mb-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_typ"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Member
+                                                                    Community</label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="mem_comm" id="mem_comm" placeholder=""
+                                                                    style="text-transform: capitalize"
+                                                                    onkeypress="return alpha(event)">
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_id"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Guardian</label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="guardian" id="guardian" placeholder=""
+                                                                    style="text-transform: capitalize"
+                                                                    onkeypress="return alpha(event)">
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="container row mb-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_typ"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Phone
+                                                                    No<span class="astrix">*</span></label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="ph_no" id="ph_no" minlength="0" maxlength="10"
+                                                                    placeholder="" onkeypress="return numeric(event)">
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_id"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Email-Id</label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="email_id" id="email_id" placeholder="">
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="container row mb-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_typ"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Adhar
+                                                                    Card No<span class="astrix">*</span></label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="adhar_no" id="adhar_no" maxlength="12"
+                                                                    placeholder="" style="text-transform: capitalize"
+                                                                    onkeypress="return numeric(event)">
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_id"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Ration
+                                                                    Card No </label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="ration_no" id="ration_no" placeholder=""
+                                                                    style="text-transform: capitalize"
+                                                                    onkeypress="return numeric(event)">
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="container row mb-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_typ"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Voter
+                                                                    Id No<span class="astrix">*</span></label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="voter_id" id="voter_id" placeholder=""
+                                                                    maxlength="10" style="text-transform: uppercase">
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_id"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">PAN
+                                                                    Card No<span class="astrix">*</span></label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="pan_id" id="pan_id" placeholder=""
+                                                                    style="text-transform:uppercase">
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="container row mb-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_typ"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Under
+                                                                    Poverty</label>
+                                                                <select class="col-sm-12 col-md-6" id="under_poverty"
+                                                                    name="under_poverty">
+                                                                    <option disabled="" selected="" value="">Select
+                                                                    </option>
+                                                                    <option value="yes">Yes</option>
+                                                                    <option value="no">No</option>
+                                                                </select>
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_id"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Total
+                                                                    Family Members</label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="fam_members" id="fam_members" placeholder=""
+                                                                    onkeypress="return  numeric(event)">
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="container row mb-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_typ"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">No
+                                                                    of Departments</label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="dept_no" id="dept_no" placeholder=""
+                                                                    onkeypress="return numeric(event)">
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_id"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Minority</label>
+                                                                <select class="col-sm-12 col-md-3 inp" id="minority"
+                                                                    name="minority" style="height: 1.85em"
+                                                                    onchange="personalReligion()">
+                                                                    <option disabled="" selected="" value=""
+                                                                        id="min_sel">Select</option>
+                                                                    <option value="yes">Yes</option>
+                                                                    <option value="no">No</option>
+                                                                </select>
+                                                                <select class="col-sm-12 col-md-3 sel" id="minority1"
+                                                                    name="minority1" style="height: 1.85em"
+                                                                    onchange="personalReligion()">
+                                                                    <option disabled="" selected="selected"
+                                                                        value="Select">Select</option>
+                                                                    <option value="Muslim">Muslim</option>
+                                                                    <option value="Chirstianity">Chirstianity</option>
+                                                                    <option value="Neo-Buddhists">Neo-Buddhists
+                                                                    </option>
+                                                                    <option value="Sikhs">Sikhs</option>
+                                                                    <option value="Jains">Jains</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="container row mb-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_typ"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Land
+                                                                    Owned By</label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="land_owner" id="land_owner" placeholder=""
+                                                                    style="text-transform: capitalize"
+                                                                    onkeypress="return alpha(event)">
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_id"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Residential
+                                                                    Status</label>
+                                                                <select class="col-sm-12 col-md-6" id="resd_status"
+                                                                    name="resd_status">
+                                                                    <option disabled="" selected="" value="">Select
+                                                                    </option>
+                                                                    <option value="Own House">Own House</option>
+                                                                    <option value="Rented Accomodation">Rented
+                                                                        Accomodation</option>
+                                                                </select>
+
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="container row mb-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_typ"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">SHG
+                                                                    Member</label>
+                                                                <select class="col-sm-12 col-md-6" id="shg_no"
+                                                                    name="shg_no">
+                                                                    <option disabled="" selected="" value="">Select
+                                                                    </option>
+                                                                    <option value="yes">Yes</option>
+                                                                    <option value="no">No</option>
+                                                                </select>
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_id"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">KCC
+                                                                    Holder</label>
+                                                                <select class="col-sm-12 col-md-6" id="kcc" name="kcc">
+                                                                    <option disabled="" selected="" value="">Select
+                                                                    </option>
+                                                                    <option value="yes">Yes</option>
+                                                                    <option value="no">No</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="container row mb-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_typ"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Is
+                                                                    Society Member</label>
+                                                                <select class="col-sm-12 col-md-6" id="s_mem"
+                                                                    name="s_mem">
+                                                                    <option disabled="" selected="" value="">Select
+                                                                    </option>
+                                                                    <option value="yes">Yes</option>
+                                                                    <option value="no">No</option>
+                                                                </select>
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_id"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Is
+                                                                    Society Staff</label>
+                                                                <select class="col-sm-12 col-md-6" id="s_staf"
+                                                                    name="s_staf">
+                                                                    <option disabled="" selected="" value="">Select
+                                                                    </option>
+                                                                    <option value="yes">Yes</option>
+                                                                    <option value="no">No</option>
+                                                                </select>
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="container row mb-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_typ"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Is
+                                                                    Account Holder</label>
+                                                                <select class="col-sm-12 col-md-6" id="acc_holder"
+                                                                    name="acc_holder">
+                                                                    <option disabled="" selected="" value="">Select
+                                                                    </option>
+                                                                    <option value="yes">Yes</option>
+                                                                    <option value="no">No</option>
+                                                                </select>
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="high_edu" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Higher
+                                                                    Education</label>
+                                                                <select class="col-sm-12 col-md-6" id="high_edu"
+                                                                    name="high_edu">
+                                                                    <option disabled="" selected="" value="">Select
+                                                                    </option>
+                                                                    <option value="Graduate">Graduate</option>
+                                                                    <option value="Post Graduation">Post Graduation
+                                                                    </option>
+                                                                    <option value="Illiterate">Illiterate</option>
+                                                                    <option value="Others">Others</option>
+                                                                    <option value="under graduate">under graduate
+                                                                    </option>
+                                                                    <option value="School Dropout">School Dropout
+                                                                    </option>
+                                                                </select>
+
+
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="container row mb-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_typ"
+                                                                    class="mr-sm-2 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Signature<span class="astrix">*</span></label>
+
+
+                                                                <div class="row">
+                                                                    <div class="col-sm-12 sign">
+                                                                        <!-- Material file selectors -->
+
+                                                                        <div class="input-group">
+                                                                            <div class="ml-6 ">
+                                                                                <!--<input type="file"
+                                                                                    class="custom-file-input"
+                                                                                    accept=".pdf,.doc,.docx,.jpg,.jpeg"
+                                                                                    id="uploadDoc_signature"
+                                                                                    aria-describedby="inputGroupFileAddon01">
+                                                                                <label class="custom-file-label"
+                                                                                    for="uploadDoc_signature">Choose
+                                                                                    file</label>-->
+
+                    	<label for="uploadDoc" style="color:#404040;"></label>
+					<input type="file" id="uploadDoc_signature" name="uploadDoc_signature" class="form-control choose" accept=".pdf,.doc,.docx,.jpg,.jpeg">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_id"
+                                                                    class="mr-sm-2 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Photograph<span class="astrix">*</span></label>
+
+                                                                <div class="row">
+                                                                    <div class="col-sm-12 sign">
+                                                                        <!-- Material file selectors -->
+
+                                                                        <div class="input-group">
+                                                                            <div class="ml-6 ">
+                                                                                <!--<input type="file"
+                                                                                    class="custom-file-input"
+                                                                                    accept=".pdf,.doc,.docx,.jpg,.jpeg"
+                                                                                    id="inputGroupFile01"
+                                                                                    aria-describedby="inputGroupFileAddon01">
+                                                                                <label class="custom-file-label"
+                                                                                    for="inputGroupFile01">Choose
+                                                                                    file</label>-->
+
+                                                                                    
+                    	<label for="uploadDoc" style="color:#404040;"></label>
+					<input type="file" id="uploadDoc_photograph" name="uploadDoc_photograph" class="form-control choose" accept=".pdf,.doc,.docx,.jpg,.jpeg">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-4">
+                                                            <div class="col-sm-12 col-md-2">
+                                                                <input type="button" class="btn" name="bck_mem_det"
+                                                                    id="bck_mem_det" value="Back">
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-3">
+                                                                <input type="button" class="btn bttn" name="clear_prsnl"
+                                                                    id="clear_prsnl" value="Clear Form"
+                                                                    onclick="clearPersonalTab()">
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-5"></div>
+                                                            <div class="col-sm-12 col-md-2">
+                                                                <input type="button" class="btn" name="cont_pres_add"
+                                                                    id="cont_pres_add" value="Continue"
+                                                                    onclick="personalDetails()">
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <!-- Present Address Tab -->
+                                                    <div id="present_address" class="container tab-pane show"><br>
+                                                        <h5>Present Address</h5>
+                                                        <hr>
+                                                        <div class="container row mb-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_typ"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5 adtyp1"
+                                                                    style="padding-left:0% !important;">Address
+                                                                    Type<span class="astrix">*</span></label>
+                                                                <select type="text" class="col-sm-12 col-md-6 adtyp1"
+                                                                    name="add_type" id="add_type" placeholder=""
+                                                                    style="text-transform: capitalize">
+                                                                    <option selected="" disabled="" value="">Select
+                                                                        Address Type</option>
+                                                                    <option>Temporary</option>
+                                                                    <option>Communication</option>
+                                                                </select>
+                                                            </div>
+
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_id"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Address
+                                                                    Line<span class="astrix">*</span></label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="add_line" id="add_line" placeholder=""
+                                                                    style="text-transform: capitalize">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-2">
+                                                            <div class="col-sm-12 col-md-6">
+
+                                                                <label for="dept" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Village<span
+                                                                        class="astrix">*</span></label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="village" id="village" placeholder=""
+                                                                    style="text-transform: capitalize"
+                                                                    onkeypress="return alpha(event)">
+                                                                <br>
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="bnk_acc_num"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Panchayat</label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="panchayat" id="panchayat" placeholder=""
+                                                                    style="text-transform: capitalize"
+                                                                    onkeypress="return alpha(event)">
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="container row mt-2">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="dept" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">City</label>
+                                                                <select name="city" class="col-sm-12 col-md-6"
+                                                                    id="city">
+                                                                    <option selected="" disabled="" value="">Select City
+                                                                    </option>
+                                                                    <% for(var i=1;i < cities.length;i++) { %>
+
+                                                                    <option value="<%= cities[i].comm_code_desc  %>">
+                                                                        <%= cities[i].comm_code_desc %></option>
+
+                                                                    <% } %>
+
+                                                                </select>
+                                                                <br>
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="state"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5 ste" style="
+                                                                    padding-left:0% !important;">State<span
+                                                                        class="astrix">*</span></label>
+                                                                <select name="state" id="state"
+                                                                    class="col-sm-12 col-md-6" style="width:50%">
+                                                                    <option selected="" disabled="" value="">Select
+                                                                        State</option>>
+                                                                    <% for(var i=1;i < states.length;i++) { %>
+
+                                                                    <option value="<%= states[i].comm_code_desc  %>">
+                                                                        <%= states[i].comm_code_desc %></option>
+
+                                                                    <% } %>
+                                                                </select>
+
+
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="container row mt-2">
+                                                            <div class="col-sm-12 col-md-6 coun">
+                                                                <label for="country" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Country<span
+                                                                        class="astrix">*</span></label>
+                                                                <select name="country" class="col-sm-12 col-md-6"
+                                                                    id="country" style="width:50%">
+                                                                    <option selected="" disabled="" value="">Select
+                                                                        Country</option>
+                                                                    <% for(var i=1;i < countries.length;i++) { %>
+
+                                                                    <option value="<%= countries[i].comm_code_desc  %>">
+                                                                        <%= countries[i].comm_code_desc %></option>
+
+
+                                                                    <% } %>
+                                                                </select>
+
+
+                                                                <br>
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="bnk_acc_num"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Pincode</label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="pincode" id="pincode"
+                                                                    onkeypress="return numeric(event)" maxlength="6"
+                                                                    placeholder="">
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="container row mt-2">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="dept" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Residing
+                                                                    Since Month</label>
+
+                                                                <select type="text" class="col-sm-12 col-md-6"
+                                                                    name="rsm" id="rsm" id="month" name="month">
+                                                                    <option selected="" disabled="" value="">Select
+                                                                        Month</option>
+                                                                    <option>January</option>
+                                                                    <option>February</option>
+                                                                    <option>March</option>
+                                                                    <option>April</option>
+                                                                    <option>May</option>
+                                                                    <option>June</option>
+                                                                    <option>July</option>
+                                                                    <option>August</option>
+                                                                    <option>September</option>
+                                                                    <option>October</option>
+                                                                    <option>November</option>
+                                                                    <option>December</option>
+                                                                </select>
+                                                                <br>
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="bnk_acc_num"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Residing
+                                                                    Since Year</label>
+                                                                <input type="text" class="col-sm-12 col-md-6" name="rsy"
+                                                                    maxlength="4" id="rsy" placeholder="  "
+                                                                    onkeypress="return numeric(event)">
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="container row mt-4">
+                                                            <div class="col-sm-12 col-md-2">
+                                                                <input type="button" class="btn" name="bck_pers_det"
+                                                                    id="bck_pers_det" value="Back">
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-3">
+                                                                <input type="button" class="btn bttn" name="clear_prsnt"
+                                                                    id="clear_prsnt" value="Clear Form"
+                                                                    onclick="clearPresentAddTab()">
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-5"></div>
+                                                            <div class="col-sm-12 col-md-2">
+                                                                <input type="button" class="btn" name="cont_perm_add"
+                                                                    id="cont_perm_add" value="Continue"
+                                                                    onclick="presentAddDetails()">
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <!-- Permanent address Tab -->
+                                                    <div id="permanent_address" class="container tab-pane show"><br>
+                                                        <h5>Permanent Address</h5>
+                                                        <hr>
+
+                                                        <!-- check box -->
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input"
+                                                                id="myCheck" name="myCheck" onclick="checkPresentDetails()">
+                                                            <label class="custom-control-label" for="myCheck">Same
+                                                                as Present Address</label>
+                                                        </div>
+                                                        <!-- end check box -->
+
+                                                        <div class="container row mt-2">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="adrtype"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5 adtyp"
+                                                                    style="padding-left:0% !important;"
+                                                                    required="true">Address Type <span
+                                                                        class="astrix">*</span>
+                                                                </label>
+
+                                                                <input type="text" class="col-sm-12 col-md-6 adtyp1"
+                                                                    name="address_type" id="address_type"
+                                                                    placeholder="Permanent" disabled
+                                                                    style="text-transform: capitalize">
+
+
+
+                                                            </div>
+
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="addr" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Address
+                                                                    line <span class="astrix">*</span> </label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="address_line" id="address_line"
+                                                                    style="text-transform: capitalize">
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-2">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="Vilg" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Village
+                                                                    <span class="astrix">*</span> </label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="vilg" id="vilg"
+                                                                    style="text-transform: capitalize"
+                                                                    onkeypress="return alpha(event)">
+                                                            </div>
+
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="panc" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Panchayat</label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="panc" id="panc"
+                                                                    style="text-transform: capitalize"
+                                                                    onkeypress="return alpha(event)">
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-2">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="City" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">City
+                                                                    <span class="astrix">*</span> </label>
+                                                                <select name="citie" class="col-sm-12 col-md-6"
+                                                                    id="citie">
+                                                                    <option selected="" disabled="" value="">Select City
+                                                                    </option>
+                                                                    <% for(var i=1;i < cities.length;i++) { %>
+
+                                                                    <option value="<%= cities[i].comm_code_desc  %>">
+                                                                        <%= cities[i].comm_code_desc %></option>
+
+                                                                    <% } %>
+
+                                                                </select>
+                                                            </div>
+
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="state1"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5 ste"
+                                                                    style="padding-left:0% !important;">State<span
+                                                                        class="astrix">*</span></label>
+                                                                <select name="stat" class="col-sm-12 col-md-6" id="stat"
+                                                                    style="width:50%">
+                                                                    <option selected="" disabled="" value="">Select
+                                                                        State</option>
+                                                                    <% for(var i=1;i < states.length;i++) { %>
+
+                                                                    <option value="<%= states[i].comm_code_desc  %>">
+                                                                        <%= states[i].comm_code_desc %></option>
+
+                                                                    <% } %>
+                                                                </select>
+
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-2">
+                                                            <div class="col-sm-12 col-md-6 coun">
+                                                                <label for="country1" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Country<span
+                                                                        class="astrix">*</span></label>
+                                                                <select name="ctry" class="col-sm-12 col-md-6" id="ctry"
+                                                                    style="width:50%">
+                                                                    <option selected="" disabled="" value="">Select
+                                                                        Country</option>
+                                                                    <% for(var i=1;i < countries.length;i++) { %>
+
+                                                                    <option value="<%= countries[i].comm_code_desc  %>">
+                                                                        <%= countries[i].comm_code_desc %></option>
+
+
+                                                                    <% } %>
+                                                                </select>
+
+                                                                <br>
+                                                            </div>
+
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="picd" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Pincode
+                                                                    <span class="astrix">*</span> </label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="picd" id="picd" maxlength="6"
+                                                                    onkeypress="return numeric(event)">
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-2">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="mnth" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Residing
+                                                                    Since Month</label>
+                                                                <select type="text" class="col-sm-12 col-md-6" id="mnth"
+                                                                    name="mnth">
+                                                                    <option selected="" disabled="" value="">Select
+                                                                        Month</option>
+                                                                    <option>January</option>
+                                                                    <option>February</option>
+                                                                    <option>March</option>
+                                                                    <option>April</option>
+                                                                    <option>May</option>
+                                                                    <option>June</option>
+                                                                    <option>July</option>
+                                                                    <option>August</option>
+                                                                    <option>September</option>
+                                                                    <option>October</option>
+                                                                    <option>November</option>
+                                                                    <option>December</option>
+                                                                </select>
+                                                            </div>
+
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="year" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Residing
+                                                                    Since Year</label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="year" maxlength="4" id="year"
+                                                                    onkeypress="return numeric(event)">
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-4">
+                                                            <div class="col-sm-12 col-md-2">
+                                                                <input type="button" class="btn" name="bck_pres_add"
+                                                                    id="bck_pres_add" value="Back">
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-3">
+                                                                <input type="button" class="btn bttn" name="clear_prmnt"
+                                                                    id="clear_prmnt" value="Clear Form"
+                                                                    onclick="clearPermanentAddTab()">
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-5"></div>
+                                                            <div class="col-sm-12 col-md-2">
+                                                                <input type="button" class="btn" name="cont_loan"
+                                                                    id="cont_loan" value="Continue"
+                                                                    onclick="permanentAddDetails()">
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+
+                                                    <!-- Loans Tab -->
+                                                    <div id="loans" class="container tab-pane show"><br>
+                                                        <h5>Loans</h5>
+                                                        <hr>
+                                                        <div class="container row mt-2">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_typ"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Eligible For
+                                                                    Loan</label>
+
+                                                                <div
+                                                                    class="custom-control custom-radio custom-control-inline rad4 rad2">
+                                                                    <input type="radio" class="radio enableclass custom-control-input1"
+                                                                        id="e_monthyes" name="e_month" value="Yes" onclick="document.getElementById('loan_amt').disabled = false; document.getElementById('amt_used').disabled = false;">
+                                                                    <label class=" custom-control-label1"
+                                                                        for="e_monthyes">Yes</label>
+                                                                </div>
+
+
+                                                                <div
+                                                                    class="custom-control custom-radio custom-control-inline rad3">
+             <input type="radio" class="radio custom-control-input1"
+             id="e_monthno" name="e_month" value="No" onclick="document.getElementById('loan_amt').disabled = true; document.getElementById('amt_used').disabled = true;">
+                                                                    <label class="custom-control-label1"
+                                                                        for="e_monthno">No</label>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-2">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="dept" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Total
+                                                                    Eligible Loan Amount</label>
+                                                                <input type="text" disabled class="col-sm-12 col-md-6"
+                                                                    disabled name="loan_amt" id="loan_amt"
+                                                                    onkeypress="return numeric(event)">
+
+
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="container row mt-2">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="acc_stat" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Total
+                                                                    Amount Used</label>
+                                                                <input type="text" disabled class="col-sm-12 col-md-6"
+                                                                    disabled name="amt_used" id="amt_used"
+                                                                    onkeypress="return numeric(event)">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-4">
+                                                            <div class="col-sm-12 col-md-2">
+                                                                <input type="button" class="btn" name="bck_perm_add"
+                                                                    id="bck_perm_add" value="Back">
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-3">
+                                                                <input type="button" class="btn bttn" name="clear_loan"
+                                                                    id="clear_loan" value="Clear Form"
+                                                                    onclick="clearLoanTab()">
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-5"></div>
+                                                            <div class="col-sm-12 col-md-2">
+                                                                <input type="button" class="btn" name="cont_nominee"
+                                                                    id="cont_nominee" value="Continue"
+                                                                    onclick="loanDetails()">
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <!-- Nominee Tab -->
+                                                    <div id="nominee" class="container tab-pane show"><br>
+                                                        <h5>Nominee</h5>
+                                                        <hr>
+                                                        <div class="container row mb-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="title" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Title</label>
+                                                                <select class="col-sm-12 col-md-6" name="nominee_type"
+                                                                    id="nominee_type" onchange="nominee_gender(this)">
+                                                                    <option disabled="" selected="" value="">Select
+                                                                    </option>
+                                                                    <option value="Mr">Mr</option>
+                                                                    <option value="Ms">Ms</option>
+                                                                    <option value="Mrs">Mrs</option>
+                                                                    <option value="Shri">Shri</option>
+                                                                </select>
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="first_name"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">First
+                                                                    Name<span class="astrix">*</span></label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="fst_name" id="fst_name" placeholder=""
+                                                                    onkeypress="return alpha(event)"
+                                                                    style="text-transform: capitalize" maxlength="20">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row ">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="middle_name"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Middle
+                                                                    Name</label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="mid_name" id="mid_name" placeholder=""
+                                                                    onkeypress="return alpha(event)"
+                                                                    style="text-transform: capitalize">
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6 ">
+                                                                <label for="last_name"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Last
+                                                                    Name<span class="astrix">*</span></label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="lst_name" id="lst_name" placeholder=""
+                                                                    onkeypress="return alpha(event)"
+                                                                    style="text-transform: capitalize">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-4">
+                                                            <div id="datepicker" name="datepicker"
+                                                                class="col-sm-12 col-md-6">
+                                                                <label for="father_name"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Father
+                                                                    Name<span class="astrix">*</span></label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="fath_name" id="fath_name" placeholder=""
+                                                                    onkeypress="return alpha(event)"
+                                                                    style="text-transform: capitalize">
+
+                                                            </div>
+                                                            <div id="datepicker" class="col-sm-12 col-md-6">
+                                                                <label for="relation" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Relation<span
+                                                                        class="astrix">*</span></label>
+                                                                <input type="text" class="col-sm-12 col-md-6" name="rel"
+                                                                    id="rel" placeholder=" "
+                                                                    onkeypress="return alpha(event)"
+                                                                    style="text-transform: capitalize">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="member_typ"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Gender</label>
+
+                                                                <div
+                                                                    class="custom-control custom-radio custom-control-inline rad4 rad2">
+                                                                    <input type="radio" class="custom-control-input1"
+                                                                        id="genmale_nominee" name="gen_nom">
+                                                                    <label class="custom-control-label1"
+                                                                        for="genmale_nominee">Male</label>
+                                                                </div>
+
+
+                                                                <div
+                                                                    class="custom-control custom-radio custom-control-inline rad3">
+                                                                    <input type="radio" class="custom-control-input1"
+                                                                        id="genfemale_nominee" name="gen_nom">
+                                                                    <label class="custom-control-label1"
+                                                                        for="genfemale_nominee">Female</label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="occupation"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Occupation</label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="occup" id="occup" placeholder=""
+                                                                    onkeypress="return alpha(event)"
+                                                                    style="text-transform: capitalize">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-2">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="date_ob" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Date
+                                                                    of
+                                                                    Birth<span class="astrix">*</span></label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="date_ob" id="date_ob" placeholder=""
+                                                                    onkeypress="return dateOfBirths(event)">
+                                                                    <span><i class="material-icons iicon1 iicon11"
+                                                                        name="date_ob" id="date_ob" data-toggle="date_ob"
+                                                                        data-target-name="date_ob">
+                                                                        event_note
+                                                                    </i></span>
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="acc_no" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Account
+                                                                    Number<span class="astrix">*</span></label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="ac_num" id="ac_num" placeholder=""
+                                                                    onkeypress="return numeric(event)" maxlength="18">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="add_typ"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5 adtyp"
+                                                                    style="padding-left:0% !important;">Address
+                                                                    Type <span class="astrix">*</span></label>
+                                                                <select type="text" class="col-sm-12 col-md-6"
+                                                                    name="addr_type" id="addr_type" placeholder=""
+                                                                    style="text-transform: capitalize">
+
+                                                                    <option selected="" disabled="" value="">Select
+                                                                        Address Type</option>
+                                                                    <option>Permanent</option>
+                                                                    <option>Temporary</option>
+                                                                </select>
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="add_lin" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Address
+                                                                    Line<span class="astrix">*</span></label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="addr_line" id="addr_line" placeholder=""
+                                                                    style="text-transform: capitalize">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="village" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Village<span
+                                                                        class="astrix">*</span></label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="vilge" id="vilge" placeholder=""
+                                                                    onkeypress="return alpha(event)"
+                                                                    style="text-transform: capitalize">
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="panchayat"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Panchayat</label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="panch" id="panch" placeholder=""
+                                                                    onkeypress="return alpha(event)"
+                                                                    style="text-transform: capitalize">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="district" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">District/City<span
+                                                                        class="astrix">*</span></label>
+                                                                <select name="distcity" class="col-sm-12 col-md-6"
+                                                                    id="distcity">
+                                                                    <option selected="" disabled="" value="">Select City
+                                                                    </option>
+                                                                    <% for(var i=1;i < cities.length;i++) { %>
+
+                                                                    <option value="<%= cities[i].comm_code_desc  %>">
+                                                                        <%= cities[i].comm_code_desc %></option>
+
+                                                                    <% } %>
+
+                                                                </select>
+
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="state2"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5 ste"
+                                                                    style="padding-left:0% !important;">State<span
+                                                                        class="astrix">*</span></label>
+                                                                <select name="stat1" class="col-sm-12 col-md-6"
+                                                                    id="stat1" style="width:50%;">
+                                                                    <option selected="" disabled="" value="">Select
+                                                                        State</option>
+                                                                    <% for(var i=1;i < states.length;i++) { %>
+
+                                                                    <option value="<%= states[i].comm_code_desc  %>">
+                                                                        <%= states[i].comm_code_desc %></option>
+
+                                                                    <% } %>
+                                                                </select>
+
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-4">
+                                                            <div class="col-sm-12 col-md-6 coun">
+                                                                <label for="country2" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Country<span
+                                                                        class="astrix">*</span></label>
+                                                                <select name="countr" class="col-sm-12 col-md-6"
+                                                                    id="countr" style="width:50%;">
+                                                                    <option selected="" disabled="" value="">Select
+                                                                        Country</option>
+                                                                    <% for(var i=1;i < countries.length;i++) { %>
+
+                                                                    <option value="<%= countries[i].comm_code_desc  %>">
+                                                                        <%= countries[i].comm_code_desc %></option>
+
+
+                                                                    <% } %>
+                                                                </select>
+
+
+                                                                <br>
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="pincode" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Pincode<span
+                                                                        class="astrix">*</span></label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="pin_cd" id="pin_cd" maxlength="6"
+                                                                    placeholder="" onkeypress="return numeric(event)">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="ph_no" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Phone
+                                                                    Number<span class="astrix">*</span></label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="phone_no" id="phone_no" minlength="0"
+                                                                    maxlength="10" placeholder=""
+                                                                    onkeypress="return numeric(event)">
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="email" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Email</label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="email" id="email" placeholder="">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-4">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="aadhar_no"
+                                                                    class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Aadhar
+                                                                    Card Number<span class="astrix">*</span></label>
+                                                                <input type="text" class="col-sm-12 col-md-6"
+                                                                    name="adh_no" id="adh_no" placeholder=""
+                                                                    onkeypress="return numeric(event)" maxlength="16">
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <label for="is_mem" class="mr-sm-4 col-sm-12 col-md-5"
+                                                                    style="padding-left:0% !important;">Is
+                                                                    Society Member</label>
+                                                                <select class="col-sm-12 col-md-6" name="ism" id="ism">
+                                                                    <option disabled selected value="">Select</option>
+                                                                    <option value="yes">Yes</option>
+                                                                    <option value="no">No</option>
+                                                                </select>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="container row mt-4">
+                                                            <div class="col-sm-12 col-md-2">
+                                                                <input type="button" class="btn" name="bck_loan"
+                                                                    id="bck_loan" value="Back">
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-3">
+                                                                <input type="button" class="btn bttn" name="clear_nmnee"
+                                                                    id="clear_nmnee" value="Clear Form"
+                                                                    onclick="clearNomineeTab()">
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-5"></div>
+                                                            <div class="col-sm-12 col-md-2">
+                                                                <input type="button" class="btn" name="save" id="save"
+                                                                    value="Save" onclick="nomineedetails()">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <% include ../includes/footer %>
+
+    </body>
+    <% include ../includes/bottom_scripts %>
+
+</html>
